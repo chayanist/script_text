@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transform Text</title>
+</head>
+<body>
+    <script>
+        var a = prompt("Enter text"); 
+        var word = []; 
+        check = false
+
+        if (a.length < 10) {
+            alert("Error ข้อความต้องมี 10 ตัวอักษขึ้นไป"); 
+        } 
+        else {
+            for (var i = 0; i < a.length; i++) {
+                if(a[i] == ' '){
+                    alert("Error ข้อความต้องไม่มีการวรรค")
+                    var check = true
+                    break
+                }
+                if(check != true){
+                    var text = a.split(''); 
+                    text[i] = text[i].toUpperCase(); 
+                    word.push(text.join('')); 
+                }
+            }
+            if(check!=true){
+            console.log(word); 
+            document.write('ผลลัพท์ ["'+  word.join('" , "') +'"]');
+            }
+            
+        }
+    </script>
+</body>
+</html>
